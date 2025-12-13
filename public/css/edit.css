@@ -1,0 +1,223 @@
+/* ===============================
+   RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY
+================================ */
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(135deg, #6366f1, #9333ea);
+    min-height: 100vh;
+    padding: 40px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    animation: pageFade 0.8s ease forwards;
+}
+
+@keyframes pageFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===============================
+   MAIN CARD
+================================ */
+.max-w-3xl {
+    width: 100%;
+    max-width: 860px;
+    background: #ffffff;
+    padding: 38px;
+    border-radius: 22px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.28);
+    animation: cardLift 0.7s ease forwards;
+}
+
+@keyframes cardLift {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===============================
+   HEADER
+================================ */
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* ===============================
+   BACK LINK
+================================ */
+a {
+    display: inline-block;
+    margin-bottom: 26px;
+    font-weight: 600;
+    color: #6366f1;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #4338ca;
+    transform: translateX(-6px);
+}
+
+/* ===============================
+   FORM
+================================ */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* ===============================
+   LABELS
+================================ */
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* ===============================
+   INPUTS
+================================ */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+textarea {
+    resize: none;
+}
+
+/* ===============================
+   FOCUS EFFECT
+================================ */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99,102,241,0.25);
+    transform: scale(1.015);
+}
+
+/* ===============================
+   GRID LAYOUTS
+================================ */
+.grid {
+    display: grid;
+    gap: 18px;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ===============================
+   ERROR BOX
+================================ */
+.bg-red-100 {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+    padding: 16px;
+    border-radius: 14px;
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+    75% { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+}
+
+/* ===============================
+   SUBMIT BUTTON
+================================ */
+button[type="submit"] {
+    margin-top: 12px;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    cursor: pointer;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* BUTTON HOVER */
+button[type="submit"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(99,102,241,0.45);
+}
+
+/* BUTTON RIPPLE */
+button[type="submit"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.35) 10%, transparent 10%);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+button[type="submit"]:hover::after {
+    transform: scale(2);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .grid-cols-3,
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .max-w-3xl {
+        padding: 26px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

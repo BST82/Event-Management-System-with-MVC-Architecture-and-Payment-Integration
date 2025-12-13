@@ -1,0 +1,234 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PAGE */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    padding: 40px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* PAGE FADE */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* TITLE */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    animation: slideDown 0.7s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* SUCCESS MESSAGE */
+p strong {
+    color: #16a34a;
+}
+
+p {
+    margin-bottom: 12px;
+    color: #374151;
+}
+
+/* CREATE BUTTON */
+a[href*="create"] {
+    display: inline-block;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+a[href*="create"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(79,70,229,0.35);
+}
+
+/* DIVIDER */
+hr {
+    margin: 25px 0;
+    border: none;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    animation: scaleIn 0.6s ease;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.96); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* HEADER */
+thead {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #ffffff;
+}
+
+th {
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ROWS */
+td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+/* ROW HOVER */
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #eef2ff;
+    transform: scale(1.01);
+}
+
+/* PRICE */
+td:nth-child(5) {
+    font-weight: bold;
+    color: #16a34a;
+}
+
+/* ACTION LINKS */
+td a {
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 6px;
+    transition: color 0.3s ease;
+}
+
+/* VIEW */
+td a[href*="show"] {
+    color: #2563eb;
+}
+
+td a[href*="show"]:hover {
+    color: #1d4ed8;
+}
+
+/* EDIT */
+td a[href*="edit"] {
+    color: #7c3aed;
+}
+
+td a[href*="edit"]:hover {
+    color: #5b21b6;
+}
+
+/* DELETE BUTTON */
+td button {
+    font-weight: 600;
+    color: #dc2626;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+td button:hover {
+    color: #991b1b;
+    transform: scale(1.1);
+}
+
+/* EMPTY STATE */
+p:last-child {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease;
+}
+/* ===============================
+   EMPTY STATE MESSAGE
+================================ */
+.empty-state {
+    margin: 60px auto;
+    padding: 28px 30px;
+    max-width: 600px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    border-radius: 18px;
+    border: 1px dashed #c7d2fe;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+    animation: emptyFade 0.7s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Highlight text */
+.empty-state span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+/* Glow animation */
+.empty-state::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle, rgba(99,102,241,0.15), transparent 60%);
+    animation: glowPulse 4s infinite ease-in-out;
+}
+
+/* Fade animation */
+@keyframes emptyFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+    0% { transform: scale(0.8); opacity: 0.6; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.6; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .empty-state {
+        font-size: 16px;
+        padding: 22px;
+    }
+}
