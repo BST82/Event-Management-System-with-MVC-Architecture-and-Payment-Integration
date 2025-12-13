@@ -90,5 +90,15 @@ Create a database named:event_manager
 - Added proper headings and spacing for readability.  
 - URLs and paths are formatted for Markdown clarity.
 
-If you want, I can **merge this with your full README** so it looks professional and ready for GitHub. Do you want me to do that?
+<img width="1891" height="901" alt="image" src="https://github.com/user-attachments/assets/8d7c9998-9642-493f-8c3c-2d5f982290cf" />
+
+<img width="1372" height="971" alt="image" src="https://github.com/user-attachments/assets/67c3a680-05be-47fd-b323-c10314f4a4b2" />
+
+
+<img width="1897" height="540" alt="image" src="https://github.com/user-attachments/assets/ad0241ac-90f7-4a9b-90a3-da2d5fd3f174" />
+
+<img width="1297" height="710" alt="image" src="https://github.com/user-attachments/assets/ad18870e-55c0-4875-a7e0-9937dbfa2718" />
+
+
+
 
