@@ -81,14 +81,8 @@ Create a database named:event_manager
 ```bash
 -http://127.0.0.1:8000/events
 -Add, edit, view, or delete events.
--Make payments using Stripe for events with prices.
+-Make payments .
 ```
-
-✅ Notes on changes:
-- Fixed Markdown syntax for code blocks using triple backticks.
-- Removed unnecessary dashes `-` before environment variables.
-- Added proper headings and spacing for readability.  
-- URLs and paths are formatted for Markdown clarity.
 
 <img width="1891" height="901" alt="image" src="https://github.com/user-attachments/assets/8d7c9998-9642-493f-8c3c-2d5f982290cf" />
 
